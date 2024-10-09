@@ -1,9 +1,11 @@
-from django.urls import path, include, re_path
-from django.contrib.auth import views as auth_views
+from django.urls import re_path, include
+from rest_framework import routers
 
-from users.views import index_view
+from users.views.user import UserViewSet
+
+router = routers.DefaultRouter()
+router.register('', UserViewSet)
 
 urlpatterns = [
-    re_path(r'^$', auth_views.LoginView.as_view()),
-    re_path(r'^index/$', index_view),
+    re_path('/', include(router.urls))
 ]

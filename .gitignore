@@ -286,6 +286,14 @@ fabric.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/django,pycharm
 
+.idea
 .idea/misc.xml
 .idea/django_test.iml
 .idea/*
+
+http/*
+
+users/migrations/*
+api/migrations/*
+content/migrations/*
+
